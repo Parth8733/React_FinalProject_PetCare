@@ -17,17 +17,17 @@ const Destroy = () => {
   const { user } = useContext(UserContext);
   const [redirect, setRedirect] = useState(false);
 
-  useEffect(() => { //booking/show/:id
+  useEffect(() => { 
     Axios.get(`${globalStore.REACT_APP_ENDPOINT}/booking/show/${id}?secret_token=${user.token}`)
     .then(({ data }) => setBookings(data))
     .catch(error => {
-      console.error(id);
+      console.error(error.message);
       setNotification({
         type: "danger",
         message: "Couldn't access the bookings at this time."
       });
     });
-  }, [globalStore, setNotification]);
+  }, [globalStore,id,user,setNotification]);
 
   const handleSubmit = async event => {
     event.preventDefault();

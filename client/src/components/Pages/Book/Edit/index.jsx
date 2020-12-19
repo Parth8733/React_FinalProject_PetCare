@@ -25,7 +25,7 @@ const Edit = () => {
         message: "Couldn't access the bookings at this time."
       });
     });
-  }, [globalStore, setNotification]);
+  }, [globalStore, id,user,setNotification]);
 
   const handleSubmit = async event => {
     event.preventDefault();

@@ -1,10 +1,7 @@
-
-
 import React from 'react';
-//import Header from '../shared/Header';
 import Header from '../../shared/Header';
 
-import { Container,Form,Col, Row, Jumbotron } from 'react-bootstrap';
+import { Container,Form,Col, Row } from 'react-bootstrap';
 
 const About = () => {
   return (
